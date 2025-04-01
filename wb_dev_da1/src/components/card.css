@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+#top_box {
+    background-color: #161618;
+    height: 70vh;
+    width: 90%;
+    margin-left: 5%;
+    position:relative;
+    top:10vh;
+    border-radius: 30px;
+    border: 3px dashed rgba(255, 255, 255, 0.475);
+    overflow: hidden;
+    background-image: url('C:/Users/samarth/Desktop/wb_dev_da1/src/media/Gemini_Generated_Image_68szu368szu368sz.jpeg');
+      background-size: cover; 
+      background-position: left; 
+      background-repeat: no-repeat; 
+      background-position-y: -250px;
+
+}
+
+.blur-text {
+    font-size: 500%; 
+    font-weight: bold; 
+    color:#FFB606;
+    margin-top: 15%;
+    z-index: 2;
+    
+}
+.aurora-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+body {
+    background-color: black;
+
+}
+.dock-panel{
+    border:2px solid white;
+}
+#fade {
+    background-color:red ;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+     position: absolute;
+    top: 110%;
+    background: linear-gradient(to bottom, black,#161618);
+}
+  #sport_container {
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #161618;
+    width: 100%;
+    height: 103%;
+    z-index: 1;
+    position: absolute;
+    top: 146%;
+    background-image: url('C:/Users/samarth/Desktop/wb_dev_da1/src/media/tuxpi.com.1739883603.jpg');
+      background-size: contain; 
+      background-position: left; 
+      background-repeat: no-repeat; 
+  }
+#football_title {
+    color: white;
+    position: absolute;
+    left: 55%;
+    top: 150%;
+    z-index: 2;
+    font-size: 10vh;
+    
+    font-weight: 10px;
+}
+#fade1 {
+    background-color:red ;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+    top: 248%;
+    background: linear-gradient(to bottom, #161618, black);
+  }
+
+h3 {
+    color: white;
+    margin-top: 15vh;
+    font-family: "Space Grotesk", serif;
+}
+#spacing {
+    height: 0vh;
+}
+#card1 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:1500px;
+    left: 40%;
+    z-index: 4;
+    font-family: "Space Grotesk", serif;
+}
+
+#card2 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:1500px;
+    left: 59%;
+    z-index: 4;
+    font-family: "Space Grotesk", serif;
+}
+#card3 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:1500px;
+    left: 78%;
+    z-index: 4;
+    font-family: "Space Grotesk", serif;
+}
+#fade_1 {
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+    top: 285%;
+    background: linear-gradient(to bottom, black,#161618);
+}
+
+#sport_container1 {
+    background-color: #161618;
+    width: 100%;
+    height: 103%;
+    z-index: 1;
+    position: absolute;
+    top: 321%;
+    background-image: url('C:/Users/samarth/Desktop/wb_dev_da1/src/media/tuxpi.com.1739895088.jpg');
+      background-size: contain; 
+      background-position: left; 
+      background-repeat: no-repeat; 
+  }
+
+#basketball_title {
+    color: white;
+    position: absolute;
+    left: 55%;
+    top: 328%;
+    z-index: 5;
+    font-size: 10vh;
+    font-weight: 10px;
+}
+
+#card4 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:3000px;
+    left: 40%;
+    z-index: 4;
+    
+}
+
+#card5 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:3000px;
+    left: 59%;
+    z-index: 4;
+    
+}
+#card6 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:3000px;
+    left: 78%;
+    z-index: 4;
+}
+#fade2 {
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+    top: 424%;
+    background: linear-gradient(to bottom, #161618, black);
+}
+#fade_2 {
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+    top: 460%;
+    background: linear-gradient(to bottom, black,#161618);
+}
+#sport_container2 {
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #161618;
+    width: 100%;
+    height: 103%;
+    z-index: 1;
+    position: absolute;
+    top: 496%;
+    background-image: url('C:/Users/samarth/Desktop/wb_dev_da1/src/media/tuxpi.com.1739961317.jpg');
+      background-size: contain; 
+      background-position: left; 
+      background-repeat: no-repeat; 
+}
+#f1_title {
+    color: white;
+    position: absolute;
+    left: 56%;
+    top: 507%;
+    z-index: 5;
+    font-size: 10vh;
+    font-weight: 10px;
+}
+#card7 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:4500px;
+    left: 40%;
+    z-index: 4;
+    
+}
+
+#card8 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:4500px;
+    left: 59%;
+    z-index: 4;
+    
+}
+#card9 {
+    position: absolute;
+    height: 500px;
+    width: 30vh;
+    top:4500px;
+    left: 78%;
+    z-index: 4;
+}
+
+.link {
+    text-decoration: none;
+}
+#fade3 {
+    width: 100%;
+    height: 300px;
+    z-index: 3;
+    position: absolute;
+    top: 598%;
+    background: linear-gradient(to bottom, #161618, black);
+}

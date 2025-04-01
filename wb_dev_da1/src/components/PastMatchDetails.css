@@ -1,0 +1,71 @@
+/* PastMatchDetails.css */
+.match-details-container {
+    background-color: #202023;
+    color: rgb(194, 140, 3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .match-details {
+    background-color: black;
+    border: 3px solid rgb(194, 140, 3);
+    padding: 40px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(194, 140, 3, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .match-details:hover {
+    transform: scale(1.02);
+  }
+  
+  .match-details p {
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: bold;
+  }
+  
+  .match-details strong {
+    color: rgb(194, 140, 3);
+  }
+  
+  h1 {
+    font-size: 32px;
+    border-bottom: 4px solid rgb(194, 140, 3);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .loading, .error {
+    color: rgb(194, 140, 3);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: rgb(194, 140, 3);
+    color: black;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .back-button:hover {
+    background-color: rgba(194, 140, 3, 0.8);
+  }
+  

@@ -1,0 +1,106 @@
+.matches-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#increment {
+    font-size: 1.8em;
+    /* margin-bottom: 15px; */
+    color: white;
+}
+h1 {
+    color: white;
+}
+
+
+#increment{ 
+    width:105vh;
+    height: 60px;
+    background-color:grey;
+}
+#teams {
+    width:105vh;
+    height: 60px;
+    background-color:grey;
+    color: white;
+}
+#score {
+    width:105vh;
+    height: 60px;
+    background-color:grey;
+    color: white;
+}
+h3, p {
+    margin: 0;
+    padding: 0;
+}
+.fold1 {
+    transition: transform 0.2s ease-in-out;
+    transform-origin: top; 
+
+    border-bottom: 2px white solid;
+    transform: rotateX(90deg);
+}
+
+.fold3:hover ~ .fold1 {
+    transform: rotateX(0deg); 
+    transition-delay: 0.2s;
+}
+.fold2 {
+    transition: transform 0.2s ease-in-out; 
+    transform-origin: top; 
+    border-top: 2px white solid;
+    border-bottom: 2px white solid;
+    transform: rotateX(90deg);
+}
+
+.fold3:hover ~ .fold2 {
+    transform: rotateX(0deg);
+}
+.fold3:not(:hover) ~ .fold2 {
+    transform: rotateX(90deg);
+    transition-delay: 0.2s;
+}
+
+.fold3:not(:hover) ~ .fold1 {
+    transform: rotateX(90deg);
+
+}
+.left_photo {
+    position: relative;
+    height: 23.4vh;
+    width:20vh;
+    z-index: 2;
+    background-color: green;
+    bottom:23.4vh;
+    right: 20vh;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.fold3:hover ~ .left_photo {
+    opacity: 100;
+}
+.right_photo {
+    position: relative;
+    height: 23.4vh;
+    width:20vh;
+    z-index: 2;
+    background-color: green;
+    bottom:46.8vh;
+    left: 105vh;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.fold3:hover ~ .right_photo {
+    opacity: 100;
+}
+.overall {
+    height: 70px;
+    transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.overall:has(.fold3:hover) {
+    height: 250px;
+}
