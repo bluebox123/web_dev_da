@@ -6,7 +6,9 @@ import Dock from 'C:/Users/samarth/Desktop/wb_dev_da1/src/animations/dock1';
 import basketball from 'C:/Users/samarth/Desktop/wb_dev_da1/src/media/icons8-basketball-50.png';
 import football from 'C:/Users/samarth/Desktop/wb_dev_da1/src/media/icons8-football-50.png';
 import f1 from 'C:/Users/samarth/Desktop/wb_dev_da1/src/media/icons8-race-car-50.png';
+import { Link } from 'react-router-dom';
 import "./card.css";
+
 const FrontPage = () => {
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -64,15 +66,15 @@ const FrontPage = () => {
                 <div id="sport_container1"></div>
                 <h1 id="basketball_title"><ShinyText text="Basketball" disabled={false} speed={3} className='custom-class' /></h1>
                 <div id="card4"><SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-                    <center><h3>Ongoing Matches</h3></center>
+                    <center><Link to="/basketball/ongoing" className="link"><h3>Ongoing Matches</h3></Link></center>
                     <h1 id="spacing"></h1>
                 </SpotlightCard></div>
                 <div id="card5"><SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-                    <center><h3>Past Matches</h3></center>
+                    <center><Link to="/basketball/past" className="link"><h3>Past Matches</h3></Link></center>
                     <h1 id="spacing"></h1>
                 </SpotlightCard></div>
                 <div id="card6"><SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-                    <center><h3>Upcoming Matches</h3></center>
+                    <center><Link to="/basketball/upcoming" className="link"><h3>Upcoming Matches</h3></Link></center>
                     <h1 id="spacing"></h1>
                 </SpotlightCard></div>
                 <div id="fade2"></div>

@@ -14,7 +14,8 @@ const PastMatches = () => {
 
   useEffect(() => {
     console.log("Fetching past matches...");
-    fetch(`https://v3.football.api-sports.io/fixtures?league=${leagueId}&season=${season}`, {
+    
+    fetch(`https://v3.football.api-sports.io/fixtures?league=${leagueId}&season=${season}&status=FT`, {
       method: "GET",
       headers: {
         "x-apisports-key": apiKey
@@ -22,19 +23,26 @@ const PastMatches = () => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log("API Response:", data);
+        console.log("Full API Response:", JSON.stringify(data, null, 2));
 
         if (!data.response || data.response.length === 0) {
+          console.error("API returned no matches.");
           throw new Error("No matches found for the given criteria.");
         }
 
         // Filtering past matches
         const pastMatches = data.response.filter(fixture => {
           const matchDate = new Date(fixture.fixture.date);
+          console.log(`Match Date: ${matchDate.toISOString()} | Filter Date: ${currentDate.toISOString()}`);
           return matchDate < currentDate;
         });
 
         console.log("Filtered Past Matches:", pastMatches);
+
+        if (pastMatches.length === 0) {
+          console.warn("No matches found before the given date.");
+        }
+
         setMatches(pastMatches);
       })
       .catch(error => {

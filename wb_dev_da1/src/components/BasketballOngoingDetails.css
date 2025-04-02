@@ -1,0 +1,41 @@
+.match-details-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.match-details {
+    margin: 20px 0;
+}
+
+.match-details h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.match-details p {
+    margin: 10px 0;
+}
+
+.match-details strong {
+    font-weight: bold;
+}
+
+.loading, .error {
+    color: red;
+    font-weight: bold;
+}
+
+.back-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

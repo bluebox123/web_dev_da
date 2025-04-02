@@ -1,0 +1,88 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./matches.css";
+
+const BasketballOngoing = () => {
+  const [ongoingMatches, setOngoingMatches] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const apiKey = "3761b773f7269f135d7eb8371e46dda6"; // Your API key
+  const season = "2023";
+  const currentDate = new Date(); // Set to today's date
+
+  useEffect(() => {
+    console.log("Fetching ongoing basketball matches...");
+
+    fetch(`https://v2.nba.api-sports.io/games?season=${season}`, {
+      method: "GET",
+      headers: {
+        "x-apisports-key": apiKey
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Full API Response:", JSON.stringify(data, null, 2));
+
+        if (!data.response || data.response.length === 0) {
+          console.error("API returned no matches.");
+          throw new Error("No matches found for the given criteria.");
+        }
+
+        const ongoing = data.response.filter(fixture => {
+          const matchDate = new Date(fixture.date.start);
+          return matchDate.toDateString() === currentDate.toDateString(); // Ongoing matches
+        });
+
+        console.log("Ongoing Matches:", ongoing);
+
+        setOngoingMatches(ongoing);
+      })
+      .catch(error => {
+        console.error("Error fetching ongoing matches:", error);
+        setError(error.message);
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <div>Loading ongoing matches...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+  return (
+    <div className="matches-container">
+      <h1>Ongoing Basketball Matches</h1>
+      {ongoingMatches.length === 0 ? (
+        <p>No ongoing matches available.</p>
+      ) : (
+        ongoingMatches.map((match, index) => (
+          <div key={match.id} className="overall">
+            <Link to={`/basketball/match/${match.id}`} className="match-link">
+              <div id="increment" className="fold3">
+                <center>
+                  <h3>Match {index + 1}</h3>
+                </center>
+              </div>
+              <div id="teams" className="fold2">
+                <center>
+                  <p>{match.teams.visitors.name} vs {match.teams.home.name}</p>
+                </center>
+              </div>
+              <div id="score" className="fold1">
+                <center>
+                  <p>{match.scores.visitors.points} - {match.scores.home.points}</p>
+                </center>
+              </div>
+            </Link>
+          </div>
+        ))
+      )}
+    </div>
+  );
+};
+
+export default BasketballOngoing; // Ensure this is a default export
